@@ -153,98 +153,61 @@
             50% { box-shadow: 0 5px 30px rgba(220, 38, 38, 0.7); }
         }
 
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin: 60px 0;
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 35px 25px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            border-radius: 15px;
-            border: 2px solid #FFD700;
-            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.35);
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #FFD700;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #888;
-            font-weight: 400;
-        }
-
         .comparison-section {
             padding: 80px 0;
             background: #000;
         }
 
         .section-title {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             color: #FFD700;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 700;
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #888;
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
 
-        .chart-container {
-            background: #0a0a0a;
-            padding: 50px;
-            border-radius: 20px;
-            border: 2px solid #333;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
-        }
-
-        .performance-grid {
+        .performance-showcase {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 60px 0;
+            gap: 50px;
+            margin: 70px 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .performance-card {
             background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            padding: 50px;
+            padding: 60px 40px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .performance-card:hover {
+            transform: translateY(-10px);
         }
 
         .performance-card.sp500 {
             background: linear-gradient(135deg, #555 0%, #333 100%);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .performance-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
             color: #000;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .performance-card.sp500 h3 {
@@ -252,10 +215,10 @@
         }
 
         .performance-card .big-number {
-            font-size: 5rem;
+            font-size: 6rem;
             font-weight: 800;
             color: #000;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             line-height: 1;
         }
 
@@ -264,35 +227,60 @@
         }
 
         .performance-card .label {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #000;
             opacity: 0.9;
+            font-weight: 500;
         }
 
         .performance-card.sp500 .label {
             color: #fff;
         }
 
-        .advantage-banner {
+        .outperformance-banner {
             background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            padding: 40px;
+            padding: 50px 40px;
             border-radius: 20px;
             text-align: center;
-            margin: 60px 0;
-            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4);
+            margin: 60px auto;
+            max-width: 900px;
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.5);
         }
 
-        .advantage-banner h3 {
-            font-size: 2.5rem;
+        .outperformance-banner h3 {
+            font-size: 3.5rem;
             color: #000;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        .advantage-banner p {
-            font-size: 1.3rem;
+        .outperformance-banner p {
+            font-size: 1.5rem;
             color: #000;
             opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .chart-section {
+            margin: 80px 0;
+            background: #0a0a0a;
+            padding: 60px;
+            border-radius: 20px;
+            border: 2px solid #333;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+        }
+
+        .chart-title {
+            font-size: 2.2rem;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 500px;
         }
 
         .strategy-section {
@@ -303,13 +291,13 @@
         .strategy-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
+            gap: 35px;
+            margin-top: 60px;
         }
 
         .strategy-card {
             background: #0a0a0a;
-            padding: 40px 35px;
+            padding: 45px 40px;
             border-radius: 15px;
             border: 2px solid #222;
             transition: all 0.3s ease;
@@ -341,15 +329,15 @@
 
         .strategy-card h4 {
             color: #FFD700;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 20px;
             font-weight: 600;
         }
 
         .strategy-card p {
             color: #aaa;
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .thesis-section {
@@ -366,10 +354,10 @@
         }
 
         .thesis-content p {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #ccc;
-            line-height: 1.9;
-            margin-bottom: 25px;
+            line-height: 2;
+            margin-bottom: 30px;
         }
 
         .cta-section {
@@ -391,53 +379,66 @@
         }
 
         .cta-section h2 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: #FFD700;
             margin-bottom: 25px;
             font-weight: 700;
         }
 
         .cta-section p {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: #aaa;
             margin-bottom: 50px;
-            max-width: 800px;
+            max-width: 850px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .cta-button {
             display: inline-flex;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
             color: #000;
-            padding: 22px 50px;
-            border-radius: 50px;
-            font-size: 1.2rem;
+            padding: 30px 50px;
+            border-radius: 15px;
+            font-size: 1.3rem;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            min-width: 320px;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
         }
 
+        .cta-button .name {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .cta-button .email {
+            font-size: 1.05rem;
+            font-weight: 400;
+            opacity: 0.85;
+        }
+
         .exclusivity-text {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             color: #666;
-            margin-top: 30px;
+            margin-top: 40px;
             font-style: italic;
         }
 
@@ -451,17 +452,17 @@
         }
 
         @media (max-width: 1024px) {
-            .stats-row {
+            .performance-showcase {
                 grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .performance-grid {
-                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
             .strategy-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                height: 400px;
             }
         }
 
@@ -471,23 +472,31 @@
             }
 
             .section-title {
-                font-size: 2rem;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             .performance-card .big-number {
-                font-size: 3.5rem;
+                font-size: 4rem;
+            }
+
+            .outperformance-banner h3 {
+                font-size: 2.5rem;
+            }
+
+            .chart-section {
+                padding: 30px 20px;
             }
 
             .chart-container {
-                padding: 30px 20px;
+                height: 350px;
             }
 
             .thesis-content {
                 padding: 40px 30px;
+            }
+
+            .cta-button {
+                min-width: 280px;
             }
         }
     </style>
@@ -519,43 +528,31 @@
     <section class="comparison-section">
         <div class="container">
             <h2 class="section-title">Proven Track Record</h2>
-            <p class="section-subtitle">2-Year Performance Comparison (2024-2026)</p>
+            <p class="section-subtitle">2-Year Total Returns (2024-2026)</p>
 
-            <div class="stats-row">
-                <div class="stat-card">
-                    <div class="stat-number">37.85%</div>
-                    <div class="stat-label">Vigil Average CAGR</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">21.5%</div>
-                    <div class="stat-label">S&P 500 CAGR</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">+16.35%</div>
-                    <div class="stat-label">Annual Alpha</div>
-                </div>
-            </div>
-
-            <div class="chart-container">
-                <canvas id="cagrChart" style="max-height: 400px;"></canvas>
-            </div>
-
-            <div class="performance-grid">
+            <div class="performance-showcase">
                 <div class="performance-card">
-                    <h3>VIGIL 2-YEAR TOTAL RETURN</h3>
+                    <h3>Vigil Average</h3>
                     <div class="big-number">87.6%</div>
-                    <div class="label">Outperforming Markets</div>
+                    <div class="label">Total Return</div>
                 </div>
                 <div class="performance-card sp500">
-                    <h3>S&P 500 2-YEAR TOTAL RETURN</h3>
+                    <h3>S&P 500 Average</h3>
                     <div class="big-number">49.0%</div>
-                    <div class="label">Market Benchmark</div>
+                    <div class="label">Total Return</div>
                 </div>
             </div>
 
-            <div class="advantage-banner">
-                <h3>+38.6% Total Outperformance</h3>
-                <p>Nearly double the market returns with disciplined risk management</p>
+            <div class="outperformance-banner">
+                <h3>+38.6% Outperformance</h3>
+                <p>Vigil delivered nearly double the market returns</p>
+            </div>
+
+            <div class="chart-section">
+                <h3 class="chart-title">2-Year CAGR Performance Comparison</h3>
+                <div class="chart-container">
+                    <canvas id="cagrChart"></canvas>
+                </div>
             </div>
         </div>
     </section>
@@ -618,12 +615,12 @@
             
             <div class="cta-buttons">
                 <a href="mailto:braden.sikes00@gmail.com" class="cta-button">
-                    📧 Braden Sikes<br>
-                    <span style="font-size: 0.9rem; font-weight: 400;">braden.sikes00@gmail.com</span>
+                    <span class="name">📧 Braden Sikes</span>
+                    <span class="email">braden.sikes00@gmail.com</span>
                 </a>
                 <a href="mailto:josh.dejung@gmail.com" class="cta-button">
-                    📧 Josh DeJung<br>
-                    <span style="font-size: 0.9rem; font-weight: 400;">josh.dejung@gmail.com</span>
+                    <span class="name">📧 Josh DeJung</span>
+                    <span class="email">josh.dejung@gmail.com</span>
                 </a>
             </div>
             
@@ -638,7 +635,6 @@
     </footer>
 
     <script>
-        // CAGR Comparison Chart
         const ctx = document.getElementById('cagrChart').getContext('2d');
         new Chart(ctx, {
             type: 'bar',
@@ -649,7 +645,7 @@
                     data: [41.80, 37.85, 33.90, 21.50],
                     backgroundColor: ['#FFD700', '#FFED4E', '#B8860B', '#505050'],
                     borderColor: ['#FFA500', '#FFD700', '#8B7500', '#333'],
-                    borderWidth: 2
+                    borderWidth: 3
                 }]
             },
             options: {
@@ -660,11 +656,14 @@
                     tooltip: {
                         backgroundColor: '#000',
                         borderColor: '#FFD700',
-                        borderWidth: 1,
+                        borderWidth: 2,
                         titleColor: '#FFD700',
                         bodyColor: '#fff',
+                        padding: 12,
+                        titleFont: { size: 16, weight: 'bold' },
+                        bodyFont: { size: 14 },
                         callbacks: {
-                            label: (context) => `${context.parsed.y}% CAGR`
+                            label: (context) => `${context.parsed.y}% Annual Return`
                         }
                     }
                 },
@@ -673,22 +672,25 @@
                         beginAtZero: true,
                         max: 50,
                         ticks: { 
-                            color: '#999',
-                            font: { size: 14 },
-                            callback: (value) => value + '%'
+                            color: '#fff',
+                            font: { size: 16, weight: 'bold' },
+                            callback: (value) => value + '%',
+                            padding: 10
                         },
-                        grid: { color: '#222' },
+                        grid: { color: '#333', lineWidth: 1 },
                         title: { 
                             display: true, 
                             text: 'Compound Annual Growth Rate (%)', 
                             color: '#FFD700',
-                            font: { size: 16, weight: 'bold' }
+                            font: { size: 18, weight: 'bold' },
+                            padding: 15
                         }
                     },
                     x: {
                         ticks: { 
-                            color: '#999',
-                            font: { size: 14, weight: 'bold' }
+                            color: '#fff',
+                            font: { size: 16, weight: 'bold' },
+                            padding: 10
                         },
                         grid: { display: false }
                     }
